@@ -1,70 +1,140 @@
+
+  
+*{
+  font-family: "Protest Riot", sans-serif;;
+}
+
 .decorative-div {
-    background-color: #f8f9fa; /* Light gray */
-    padding: 30px;
-    text-align: center;
-    
+  padding: 30px;
+  text-align: center;
+  padding: 250px 100px;
 }
 
 .decorative-div h2 {
-    color: #007bff; /* Blue */
-    font-size: 36px;
-    margin-bottom: 20px;
+  color: #007bff;
+  font-size: 36px;
+  font-size: 90px;
+  margin-bottom: 60px;
 }
 
-/* Custom CSS for carousel images */
-.carousel-item img {
-    width:10%;
-    height:30%
+.decorative-div p {
+  font-size: 30px;
 }
-/* Basic CSS for Navbar */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+
+@media (max-width: 578px) {
+  .decorative-div h2 {
+      font-size: 50px;
   }
-  nav {
-    background-color: #333;
-    overflow: hidden;
+
+  .decorative-div p {
+      font-size: 25px;
   }
-  nav a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    transition: background-color 0.3s;
+
+  .decorative-div {
+      padding: 150px 60px
   }
-  nav a:hover {
-    background-color: #ddd;
-    color: black;
+}
+
+.navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  font-size: 20px;
+}
+
+.navbar-brand {
+  margin-left: 30px;
+  font-size: 25px;
+}
+
+.nav-link {
+  position: relative;
+  color: #a0a0a0;
+  text-decoration: none;
+  padding: 0 20px;
+  margin: 0px 20px;
+  letter-spacing: 0.5px;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: transparent;
+  transition: width 0.5s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  background-color: #007bff;
+}
+
+@media (max-width: 320px) {
+  .navbar-brand {
+      font-size: 15px;
   }
-  /* Responsive CSS */
-  @media screen and (max-width: 600px) {
-    nav a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
+}
+
+@media (max-width: 945px) {
+  .nav-link {
+      padding: 0px 10px;
+      margin: 0px 7px;
+      font-size: 20px;
   }
-  /* Attractive styling */
-  nav a {
-    position: relative;
-    overflow: hidden;
+
+  .navbar-brand {
+      padding-left: 5px;
+      margin-left: 5px;
+      font-size: 20px;
   }
-  nav a:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: #fff;
-    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+      margin: 10px 0px;
+      margin-left: 15px;
+      font-size: 20px;
   }
-  nav a:hover:after {
-    width: 100%;
-    left: 0;
+
+  .navbar-brand {
+      margin-left: 20px;
   }
-  
+
+  .nav-link:hover::after {
+      width: 30%;
+      background-color: #007bff;
+  }
+}
+
+#places_carousel {
+  margin: auto;
+  max-width: 850px;
+  position: absolute;
+  margin: 12em 20em 0em 20em;
+}
+
+#places_carousel_back img {
+  filter: blur(7px);
+}
+
+#places_carousel_back {
+  margin: auto;
+  position: absolute;
+}
+
+.carousel-caption h5 {
+  color: white !important;
+  border-radius: 50px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  color: white !important;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: bold;
+}
